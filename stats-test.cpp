@@ -12,10 +12,10 @@ using namespace  Statistics;
 //}
 
 TEST(Statistics, AverageNaNForEmpty) {
-    auto computedStats = Statistics::ComputeStatistics({ NAN, 1.5, 3.2, 4.5 });
+    auto computedStats = Statistics::ComputeStatistics({ 1.5, 8.9,NAN, 4.5 });
     float epsilon = NAN;
 
-    //EXPECT_EQ(computedStats.average , epsilon);
+    EXPECT_EQ(computedStats.average , NAN);
     EXPECT_EQ(computedStats.max , NAN);
     EXPECT_EQ(computedStats.min , NAN);
 
