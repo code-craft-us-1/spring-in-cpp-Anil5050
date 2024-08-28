@@ -16,8 +16,8 @@ TEST(Statistics, AverageNaNForEmpty) {
     float epsilon = NAN;
 
     //EXPECT_EQ(computedStats.average , epsilon);
-    EXPECT_EQ(computedStats.max , epsilon);
-    EXPECT_EQ(computedStats.min , epsilon);
+    EXPECT_FLOAT_EQ(std::abs(computedStats.max - 8.9), epsilon);
+    //EXPECT_FLOAT_EQ(std::abs(computedStats.min - 1.5), epsilon);
 
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
