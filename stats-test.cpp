@@ -15,7 +15,7 @@ TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({ NAN, 1.5, 3.2, 4.5 });
     float epsilon = NAN;
 
-    EXPECT_FLOAT_EQ(std::abs(computedStats.average, epsilon));
+    EXPECT_EQ(computedStats.average , epsilon);
     //EXPECT_FLOAT_EQ(std::abs(computedStats.max - 8.9), epsilon);
     //EXPECT_FLOAT_EQ(std::abs(computedStats.min - 1.5), epsilon);
 
