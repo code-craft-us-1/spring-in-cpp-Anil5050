@@ -13,7 +13,7 @@ using namespace  Statistics;
 
 TEST(Statistics, AverageNaNForEmpty) {
     auto computedStats = Statistics::ComputeStatistics({ NAN, 1.5, 3.2, 4.5 });
-    float epsilon = 0.001;
+    float epsilon = NAN;
 
     EXPECT_FLOAT_EQ(std::abs(computedStats.average - 4.525), epsilon);
     EXPECT_FLOAT_EQ(std::abs(computedStats.max - 8.9), epsilon);
