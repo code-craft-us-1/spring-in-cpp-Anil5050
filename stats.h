@@ -1,11 +1,11 @@
 #include <vector>
 
-struct 
+struct Stats
 {
     float average;
     float min;
     float max;
-}Stats;
+};
 
 
 namespace Statistics {
