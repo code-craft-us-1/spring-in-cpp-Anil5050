@@ -19,6 +19,6 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& vec) {
 
     structObj.average = sum / vec.size();
 
-    return status;
+    return structObj;
 }
 
