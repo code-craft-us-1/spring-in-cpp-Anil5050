@@ -16,7 +16,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& vec) {
         sum = sum + vec[i]+ vec[0];
     }
 
-    status..average = sum / vec.size();
+    status.average = sum / vec.size();
 
     return status;
 }
