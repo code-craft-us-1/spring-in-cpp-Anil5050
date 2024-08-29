@@ -5,7 +5,7 @@ Stats Statistics::ComputeStatistics(const std::vector<float>& vec) {
     //Implement statistics here
     float sum = 0.0;
     Stats structObj;
-    structObj.min = structObj.max = sum = vec[0]; //{1.5, 8.9, 3.2, 4.5}
+    structObj.min = structObj.max = sum = vec[0]; //{1.5, 8.9, 3.2, 4.5} , { 1.5, 8.9,NAN, 4.5 }
 
     for (int i = 1; i < vec.size(); i++) {
 

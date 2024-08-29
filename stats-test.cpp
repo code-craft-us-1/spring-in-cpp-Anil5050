@@ -12,13 +12,14 @@ TEST(Statistics, ReportsAverageMinMax) {
 }
 
 TEST(Statistics, AverageNaNForEmpty) {
-    /*auto computedStats = Statistics::ComputeStatistics({ 1.5, 8.9,NAN, 4.5 });
+    auto computedStats = Statistics::ComputeStatisticsNAN({ 1.5, 8.9,NAN, 4.5 });
     float epsilon = NAN;
 
-    EXPECT_EQ(computedStats.average , epsilon);*/
+    EXPECT_EQ(computedStats.average , epsilon);
 
-    //EXPECT_FLOAT_EQ(std::abs(computedStats.min - 1.5), epsilon);
-
+    EXPECT_FLOAT_EQ(std::abs(computedStats.average - 4.525), epsilon);
+    EXPECT_FLOAT_EQ(std::abs(computedStats.max - 8.9), epsilon);
+    EXPECT_FLOAT_EQ(std::abs(computedStats.min - 1.5), epsilon);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
     //Design the gtest EXPECT statement here.
