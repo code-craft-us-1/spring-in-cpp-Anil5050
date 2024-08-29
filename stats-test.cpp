@@ -12,7 +12,7 @@ TEST(Statistics, ReportsAverageMinMax) {
 }
 
 TEST(Statistics, AverageNaNForEmpty) {
-    auto computedStats = Statistics::ComputeStatisticsNAN({ 1.5, 8.9,NAN, 4.5 });
+    auto computedStats = Statistics::ComputeStatisticsNAN({ NAN, 1.5, 8.9, 4.5 });
     float epsilon = NAN;
 
     EXPECT_EQ(computedStats.average , epsilon);
